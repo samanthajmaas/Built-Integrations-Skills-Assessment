@@ -1,0 +1,7 @@
+# IDE files
+.vscode
+
+# Project files
+__pycache__
+db.sqlite3
+venv
