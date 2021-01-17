@@ -46,11 +46,11 @@ OK, let's get the project setup, and then we can talk about the tasks and featur
 
 ## Project Setup 
 
-1. Clone the repository: `git clone git@github.com:epochblue/integrations-skills-assessment`
+1. Clone the repository: `git clone https://github.com/epochblue/integrations-skills-assessment.git`
 2. `cd` into the project directory: `cd integrations-skills-assessment`
 3. Create and activate a virtual environment: `python3 -m virtualenv venv; source venv/bin/activate`
 4. Install project requirements: `pip3 install -r requirements.txt`
-5. `cd` into the project directory: `cd integration_code_pairing`
+5. `cd` into the project root directory: `cd integration_code_pairing_root`
 6. Run migrations: `python3 manage.py migrate`
 7. Run the server: `python3 manage.py runserver`
 8. Point browser to `127.0.0.1:8000`
