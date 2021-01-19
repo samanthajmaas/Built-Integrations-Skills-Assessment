@@ -26,4 +26,10 @@ def get_by_id(request, id):
         planet.save()
     
     return JsonResponse(planet.to_json(), status=200)
+
+def search_by_population(self):
+    query = self.request.GET.get('q')
+    searched_list = Planet.objects.filter(population__gt= query)
+
+    return JsonResponse(searched_list.to_json(), status=200)
     
