@@ -1,7 +1,6 @@
 from django.test import TestCase
 from people.models import People
 
-
 class PeopleTestCase(TestCase):
     def setUp(self):
         super().setUp()
@@ -17,6 +16,7 @@ class PeopleTestCase(TestCase):
             eye_color='brown',
             birth_year='1000',
             gender='female',
+            homeworld=1
         )
         p_dict = p.to_dict()
         self.assertEqual(p.id, 1)
@@ -31,7 +31,8 @@ class PeopleTestCase(TestCase):
             'hair_color': 'brown',
             'eye_color': 'brown',
             'birth_year': '1000',
-            'gender': 'female'
+            'gender': 'female',
+            'homeworld': 1
         }
 
         p = People(id=1, **expected_dict)

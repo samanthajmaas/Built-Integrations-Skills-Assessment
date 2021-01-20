@@ -1,4 +1,5 @@
 from django.db import models
+from planets.models import Planet
 
 class People(models.Model):
     id = models.IntegerField(primary_key=True, unique=True, serialize=True)
@@ -10,6 +11,7 @@ class People(models.Model):
     eye_color = models.CharField(max_length=255)
     birth_year = models.CharField(max_length=255)
     gender = models.CharField(max_length=255)
+    homeworld = models.ForeignKey(Planet, on_delete=models.CASCADE,)
 
     unserializable_fields = ('id',)
 
